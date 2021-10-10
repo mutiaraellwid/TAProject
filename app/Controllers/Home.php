@@ -13,14 +13,14 @@ class Home extends BaseController
 	public function index()
 	{
         $data = array(
-            'chart' => $this->dataModel->db->table('databanjir')->limit(10)->orderBy('DateTime','DESC')->get()->getResultArray()
+            'chart' => $this->dataModel->db->table('DataBanjir')->limit(10)->orderBy('DateTime','DESC')->get()->getResultArray()
         );
         echo view('Home/home', $data);
 	}
     public function about()
 	{
 		$data = array(
-            'chart' => $this->dataModel->db->table('databanjir')->get()->getResultArray()
+            'chart' => $this->dataModel->db->table('DataBanjir')->get()->getResultArray()
         );
         echo view('Home/about', $data);
 	}
