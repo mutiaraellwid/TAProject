@@ -83,7 +83,7 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                <?= $pager->links('test','data_pagination'); ?>
+                                <?= $pager->links('DB_Banjir','data_pagination'); ?>
                             </div>
                         </div>
                         <!-- /.card-body -->
