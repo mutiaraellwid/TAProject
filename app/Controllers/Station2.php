@@ -14,7 +14,7 @@ class Station2 extends BaseController
 	{
         $dashboard = new DataModel2();
         $data = [
-            'chart' => $this->dataModel2->db->table('databanjir2')->get()->getResultArray(),
+            'chart' => $this->dataModel2->db->table('DataBanjir2')->get()->getResultArray(),
             'dashboard' => $dashboard->findAll()
         ];
         echo view('Station2/dashboard', $data);
@@ -22,7 +22,7 @@ class Station2 extends BaseController
     public function chart()
 	{
         $data = array(
-            'chart' => $this->dataModel2->db->table('databanjir2')->limit(10)->orderBy('DateTime','DESC')->get()->getResultArray()
+            'chart' => $this->dataModel2->db->table('DataBanjir2')->limit(10)->orderBy('DateTime','DESC')->get()->getResultArray()
         );
         echo view('Station2/chart', $data);
 	}
@@ -30,7 +30,7 @@ class Station2 extends BaseController
 	{
         $field = $this->dataModel2->findAll();
         $data = [
-            'chart' => $this->dataModel->db->table('databanjir2')->get()->getResultArray(),
+            'chart' => $this->dataModel->db->table('DataBanjir2')->get()->getResultArray(),
             'field' => $field
         ];
         echo view('Station2/field', $data);
@@ -38,8 +38,8 @@ class Station2 extends BaseController
     public function tables()
 	{        
         $data = [
-            'chart' => $this->dataModel2->db->table('databanjir2')->orderBy('Rain_Gauge','DESC')->get()->getResultArray(),
-            'data' => $this->dataModel2->paginate(5, 'test'),
+            'chart' => $this->dataModel2->db->table('DataBanjir2')->orderBy('Rain_Gauge','DESC')->get()->getResultArray(),
+            'data' => $this->dataModel2->paginate(5, 'DB_Banjir'),
             'pager' => $this->dataModel2->pager
         ];
         echo view('Station2/tables', $data);
