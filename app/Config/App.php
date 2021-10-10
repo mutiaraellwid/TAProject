@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost/Misred';
+	public $baseURL = 'http://localhost/TAProject';
 	// public $baseURL = 'http://103.169.139.48/Misred';
 	// public $baseURL = 'http://WebMonitoring.com/';
 
