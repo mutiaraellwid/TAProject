@@ -32,10 +32,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'test',
+		'hostname' => '103.168.139.48',
+		'username' => 'misred',
+		'password' => 'Misrednodesensor1@',
+		'database' => 'DB_Banjir',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
